@@ -46,17 +46,46 @@ const Order = require("../Model/Order");
     }
   };
   
-    const filterOrders = async (req, res) => {
+  const filterOrders = async (req, res) => {
     try {
       const { startDate, endDate, minPrice, maxPrice } = req.body;
-      console.log(req.body);
   
-      const filteredOrders = await Order.find({
-        orderDate: { $gte: new Date(startDate), $lte: new Date(endDate) },
-        totalAmount: { $gte: minPrice, $lte: maxPrice },
-      }).populate('productIDs');
+      // Input validation
+      if (!startDate || !endDate) {
+        return res.status(400).json({ error: 'Invalid input parameters' });
+      }
   
-      console.log(filteredOrders);
+      const filteredOrders = await Order.aggregate([
+        {
+          $match: {
+            orderDate: { $gte: new Date(startDate), $lte: new Date(endDate) },
+          },
+        },
+        {
+          $lookup: {
+            from: 'products', // Assuming your product model is named 'Product'
+            localField: 'productIDs',
+            foreignField: '_id',
+            as: 'products',
+          },
+        },
+        {
+          $addFields: {
+            totalAmount: {
+              $reduce: {
+                input: '$products',
+                initialValue: 0,
+                in: { $add: ['$$value', '$$this.price'] },
+              },
+            },
+          },
+        },
+        {
+          $match: {
+            totalAmount: { $gte: minPrice, $lte: maxPrice },
+          },
+        },
+      ]);
   
       res.json(filteredOrders);
     } catch (error) {
@@ -64,7 +93,7 @@ const Order = require("../Model/Order");
       res.status(500).json({ error: 'Internal Server Error' });
     }
   };
-
+  
 module.exports = {
   getOrders,
   getProducts,
