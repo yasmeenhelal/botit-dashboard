@@ -1,0 +1,77 @@
+[
+    {
+      "customerName": "John Doe",
+      "productIDs": ["658ca41b64f0317eca2ccae8", "658ca41b64f0317eca2ccae9"],
+      "orderDate": "2023-01-01T12:00:00Z"
+    },
+    {
+      "customerName": "Alice Smith",
+      "productIDs": ["658ca41b64f0317eca2ccaea", "658ca41b64f0317eca2ccaeb"],
+      "orderDate": "2023-01-02T14:30:00Z"
+    },
+    {
+      "customerName": "Bob Johnson",
+      "productIDs": ["658ca41b64f0317eca2ccae7", "658ca41b64f0317eca2ccaee"],
+      "orderDate": "2023-01-03T10:15:00Z"
+    },
+    {
+      "customerName": "Emma Brown",
+      "productIDs": ["658ca41b64f0317eca2ccaef", "658ca41b64f0317eca2ccaf0"],
+      "orderDate": "2023-01-04T18:45:00Z"
+    },
+    {
+      "customerName": "Michael Wilson",
+      "productIDs": ["658ca41b64f0317eca2ccaf1", "658ca41b64f0317eca2ccaf2"],
+      "orderDate": "2023-01-05T09:00:00Z"
+    },
+    {
+      "customerName": "Olivia Davis",
+      "productIDs": ["658ca41b64f0317eca2ccaf3", "658ca41b64f0317eca2ccaf4"],
+      "orderDate": "2023-01-06T16:20:00Z"
+    },
+    {
+      "customerName": "James Taylor",
+      "productIDs": ["658ca41b64f0317eca2ccaf5", "658ca41b64f0317eca2ccaf7"],
+      "orderDate": "2023-01-07T11:30:00Z"
+    },
+    {
+      "customerName": "Sophia Thomas",
+      "productIDs": ["658ca41b64f0317eca2ccaf6", "658ca41b64f0317eca2ccaf8"],
+      "orderDate": "2023-01-08T13:45:00Z"
+    },
+    {
+      "customerName": "William Anderson",
+      "productIDs": ["658ca41b64f0317eca2ccaf9", "658ca41b64f0317eca2ccafa"],
+      "orderDate": "2023-01-09T17:10:00Z"
+    },
+    {
+      "customerName": "Ava Martinez",
+      "productIDs": ["658ca41b64f0317eca2ccaec", "658ca41b64f0317eca2ccaed"],
+      "orderDate": "2023-01-10T08:15:00Z"
+    },
+    {
+      "customerName": "Ethan Hernandez",
+      "productIDs": ["658ca41b64f0317eca2ccae8", "658ca41b64f0317eca2ccae9"],
+      "orderDate": "2023-01-11T14:50:00Z"
+    },
+    {
+      "customerName": "Mia Garcia",
+      "productIDs": ["658ca41b64f0317eca2ccaea", "658ca41b64f0317eca2ccaeb"],
+      "orderDate": "2023-01-12T09:25:00Z"
+    },
+    {
+      "customerName": "Noah Rodriguez",
+      "productIDs": ["658ca41b64f0317eca2ccae7", "658ca41b64f0317eca2ccaee"],
+      "orderDate": "2023-01-13T16:30:00Z"
+    },
+    {
+      "customerName": "Isabella Lopez",
+      "productIDs": ["658ca41b64f0317eca2ccaef", "658ca41b64f0317eca2ccaf0"],
+      "orderDate": "2023-01-14T11:00:00Z"
+    },
+    {
+      "customerName": "Liam Wright",
+      "productIDs": ["658ca41b64f0317eca2ccaf1", "658ca41b64f0317eca2ccaf2"],
+      "orderDate": "2023-01-15T13:20:00Z"
+    }
+  ]  

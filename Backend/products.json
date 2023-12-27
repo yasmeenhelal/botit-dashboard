@@ -1,0 +1,102 @@
+[
+    {
+      "name": "Laptop",
+      "category": "Electronics",
+      "price": 799.99
+    },
+    {
+      "name": "Smartphone",
+      "category": "Electronics",
+      "price": 599.99
+    },
+    {
+      "name": "Coffee Maker",
+      "category": "Home Appliances",
+      "price": 49.99
+    },
+    {
+      "name": "Running Shoes",
+      "category": "Sports",
+      "price": 79.99
+    },
+    {
+      "name": "Backpack",
+      "category": "Fashion",
+      "price": 39.99
+    },
+    {
+      "name": "Desk Chair",
+      "category": "Furniture",
+      "price": 129.99
+    },
+    {
+      "name": "Gaming Mouse",
+      "category": "Gaming",
+      "price": 49.99
+    },
+    {
+      "name": "Digital Camera",
+      "category": "Electronics",
+      "price": 299.99
+    },
+    {
+      "name": "Fitness Tracker",
+      "category": "Fitness",
+      "price": 89.99
+    },
+    {
+      "name": "Kitchen Blender",
+      "category": "Home Appliances",
+      "price": 69.99
+    },
+    {
+      "name": "Leather Wallet",
+      "category": "Fashion",
+      "price": 29.99
+    },
+    {
+      "name": "Headphones",
+      "category": "Electronics",
+      "price": 129.99
+    },
+    {
+      "name": "Yoga Mat",
+      "category": "Fitness",
+      "price": 19.99
+    },
+    {
+      "name": "Desk Lamp",
+      "category": "Home Decor",
+      "price": 34.99
+    },
+    {
+      "name": "Outdoor Grill",
+      "category": "Outdoor",
+      "price": 199.99
+    },
+    {
+      "name": "Hiking Boots",
+      "category": "Sports",
+      "price": 89.99
+    },
+    {
+      "name": "Smart Thermostat",
+      "category": "Smart Home",
+      "price": 79.99
+    },
+    {
+      "name": "E-book Reader",
+      "category": "Electronics",
+      "price": 129.99
+    },
+    {
+      "name": "Travel Backpack",
+      "category": "Travel",
+      "price": 59.99
+    },
+    {
+      "name": "Wireless Earbuds",
+      "category": "Electronics",
+      "price": 69.99
+    }
+  ]  

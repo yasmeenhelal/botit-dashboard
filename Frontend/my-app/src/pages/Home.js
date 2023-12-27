@@ -54,7 +54,7 @@ const Home = () => {
 
             if (response.ok) {
                 setOrders(json);
-                setFilteredOrders(json); // Initialize filtered orders with all orders
+                setFilteredOrders(json);
             }
         }
 
@@ -63,25 +63,32 @@ const Home = () => {
 
     const handleSearch = async ({ minPrice, maxPrice, startDate, endDate }) => {
         try {
+            // Set default values if inputs are empty
+            const defaultMinPrice = 0;
+            const defaultMaxPrice = 10000;
+    
+            // Get today's date in the format YYYY-MM-DD
+            const todayDate = new Date().toISOString().split('T')[0];
+    
             const response = await fetch('/filter-orders', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
                 },
                 body: JSON.stringify({
-                    minPrice,
-                    maxPrice,
-                    startDate,
-                    endDate,
+                    startDate: startDate || '0001-01-01', // Set to the earliest possible date
+                    endDate: endDate || todayDate,
+                    minPrice: minPrice || defaultMinPrice,
+                    maxPrice: maxPrice || defaultMaxPrice,
                 }),
             });
-
+    
             if (response.ok) {
                 const json = await response.json();
                 setFilteredOrders(json);
             } else {
-                // Handle error
-                console.error('Error filtering orders');
+                const errorText = await response.text();
+                throw new Error(`Error filtering orders: ${errorText}`);
             }
         } catch (error) {
             console.error('Error filtering orders', error);
