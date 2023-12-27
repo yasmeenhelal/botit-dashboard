@@ -1,0 +1,24 @@
+.nav-buttons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav-button:hover {
+    color: red;
+  }
+  
+  .nav-button:active {
+    color: black;
+  }
+
+  .nav-buttons {
+    margin-top: 50px;
+  }
+  
+  .nav-button {
+    margin-left: 10px; 
+    color: gray; 
+    text-decoration: none; 
+  }
+  

@@ -1,0 +1,31 @@
+.search-bar-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .label-and-slider {
+    display: flex;
+    gap: 10px; /* Adjust the gap as needed */
+  }
+  
+  .search-bar-label {
+    flex-shrink: 0;
+  }
+  
+  .price-range-element {
+    flex: 1;
+  }
+  
+  .date-inputs {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .date-input {
+    width: 100px; /* Adjust the width as needed */
+  }
+  
+  .search-button {
+    height: 30px; /* Adjust the height as needed */
+  }  
