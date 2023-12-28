@@ -22,11 +22,9 @@ const Home = () => {
 
     const handleSearch = async ({ minPrice, maxPrice, startDate, endDate }) => {
         try {
-            // Set default values if inputs are empty
             const defaultMinPrice = 0;
             const defaultMaxPrice = 10000;
     
-            // Get today's date in the format YYYY-MM-DD
             const todayDate = new Date().toISOString().split('T')[0];
     
             const response = await fetch('/filter-orders', {

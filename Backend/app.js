@@ -4,9 +4,10 @@ const mongoose = require("mongoose");
 const cors = require("cors");
 const fs = require('fs')
 
+
+//Add Data
 const dataProd = JSON.parse(fs.readFileSync('./products.json', 'utf-8'))
 const dataOrd = JSON.parse(fs.readFileSync('./orders.json', 'utf-8'))
-
 const Product = require("./Model/Product.js");
 const Order = require("./Model/Order.js");
 const importData = async () => {
@@ -30,6 +31,7 @@ const importDataOrd = async () => {
 
 const OrderRouter = require("./Routes/OrderRoutes");
 const ProductRouter = require("./Routes/ProductRoutes");
+const UserRouter = require("./Routes/UserRoutes");
 
 const dbPath = process.env.ATLAS_URI;
 
@@ -46,6 +48,7 @@ app.use(express.urlencoded({extended: false}));
 
 app.use("/", OrderRouter);
 app.use("/", ProductRouter);
+app.use("/", UserRouter);
 
 
 app.listen(8000);

@@ -4,6 +4,8 @@ import{BrowserRouter,Routes,Route} from 'react-router-dom'
 import Home from './pages/Home';
 import Navbar from './components/Navbar';
 import Products from './pages/Products';
+import SignUp from './pages/SignUp';
+import Login from './pages/Login';
 
 
 function App () {
@@ -17,13 +19,24 @@ function App () {
     
       <Route
         path="/"
-        element={<Home />}
+        element={<Login />}
         />
 
      <Route
       path="/products"
       element={<Products />}
       />
+
+      <Route
+      path="/home"
+      element={<Home />}
+      />
+
+      <Route
+      path="/signup"
+      element={<SignUp />}
+      />
+
     
       </Routes>
 
