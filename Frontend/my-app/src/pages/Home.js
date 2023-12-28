@@ -1,44 +1,3 @@
-// import { useEffect,useState} from "react"
-// import OrderDetails from '../components/OrderDetails';
-// import SearchBar from '../components/SearchBar';
-
-// const Home=()=>{
-//     const [orders,setOrders]=useState(null)
-    
-    
-    
-//     useEffect(()=>{
-//       const fetchOrders= async()=>{
- 
-//       const response = await fetch ('/orders')
-//       const json= await response.json()
-
-//     if(response.ok){
-//         setOrders(json)
-
-//     }
-// }
-
-//      fetchOrders()
-
-//     },[])
-    
-//     return (
-//         <div className="home">
-//             <div className="orders">
-//         {orders && orders.map((order)=>(
-
-//             <OrderDetails order={order} key={order._id} />
-
-//         ))}
-//         </div>
-        
-//         </div>
-//     )
-// }
-
-// export default Home
-
 import { useEffect, useState } from "react";
 import OrderDetails from '../components/OrderDetails';
 import SearchBar from '../components/SearchBar';
@@ -97,14 +56,39 @@ const Home = () => {
 
     return (
         <div className="home">
-            <SearchBar onSearch={handleSearch} />
+            <div className="content-container">
+            <SearchBar onSearch={handleSearch} /> </div>
             <div className="orders">
                 {filteredOrders && filteredOrders.map((order) => (
                     <OrderDetails order={order} key={order._id} />
                 ))}
             </div>
+            
         </div>
     );
 }
 
 export default Home;
+
+// return (
+//     <div className="home"> 
+//       {/* Main content */}
+//       <div className="content-container">
+//         {/* SearchBar */}
+//         <SearchBar onSearch={handleSearch} />
+  
+//         {/* Orders */}
+//         <div className="orders">
+//           {filteredOrders &&
+//             filteredOrders.map((order) => (
+//               <div className="order-box" key={order._id}>
+//                 <OrderDetails order={order} />
+//               </div>
+//             ))}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// }
+
+//  export default Home;

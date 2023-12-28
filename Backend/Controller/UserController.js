@@ -63,7 +63,7 @@ const Order = require("../Model/Order");
         },
         {
           $lookup: {
-            from: 'products', // Assuming your product model is named 'Product'
+            from: 'products',
             localField: 'productIDs',
             foreignField: '_id',
             as: 'products',
@@ -85,8 +85,18 @@ const Order = require("../Model/Order");
             totalAmount: { $gte: minPrice, $lte: maxPrice },
           },
         },
+        {
+          $project: {
+            refNumber: '$_id', // Include the refNumber in the projection
+            customerName: 1,
+            orderDate: 1,
+            totalAmount: 1,
+            products: 1,
+          },
+        },
       ]);
   
+      console.log(filteredOrders);
       res.json(filteredOrders);
     } catch (error) {
       console.error(error);

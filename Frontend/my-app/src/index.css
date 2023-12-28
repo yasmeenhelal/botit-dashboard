@@ -35,16 +35,17 @@ header a {
 /* homepage */
 .home {
   display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 100px;
+  grid-template-rows: auto auto;
+  gap: 20px;
 }
 .order-details {
   background: #fff;
   border-radius: 4px;
-  margin: 20px auto;
+  margin: 20px 0;
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  max-width: 600px;
 }
 .order-details h4 {
   margin: 0 0 10px 0;
@@ -55,4 +56,15 @@ header a {
   margin: 0;
   font-size: 0.9em;
   color: #555;
+}
+
+/* SearchBar */
+.content-container {
+  background: rgb(229, 225, 225);
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  max-width: 1300px;
+  width: 100%;
+  margin: 10px auto;
 }
