@@ -34,9 +34,11 @@ header a {
 
 /* homepage */
 .home {
-  display: grid;
-  grid-template-rows: auto auto;
+  display: flex;
+  flex-direction: column; /* Set to column to have elements below each other */
   gap: 20px;
+  max-width: 1300px;
+  margin: 10px auto;
 }
 .order-details {
   background: #fff;
@@ -45,7 +47,8 @@ header a {
   padding: 20px;
   position: relative;
   box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-  max-width: 600px;
+  max-width: 500px;
+  flex: 1;
 }
 .order-details h4 {
   margin: 0 0 10px 0;
