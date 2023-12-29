@@ -16,7 +16,7 @@ const SignUp = () => {
       .post("http://localhost:8000/create", { user: newUser })
       .then(() => {
         console.log("created");
-        alert("User Created Successfully");
+        alert("Admin Created Successfully");
         history("/login");
       })
       .catch((err) => console.log(err));
